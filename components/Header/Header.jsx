@@ -3,8 +3,8 @@ import Image from "next/image";
 import {
     HeaderContainer,
     OptionsContainer,
-    Option
 } from './Header.styles';
+import { CustomLink } from "../CustomLink/CustomLink";
 
 export const Header = () => {
     return (
@@ -12,10 +12,10 @@ export const Header = () => {
             <Image src="/logo.png" width={48} height={48} alt="Logo" /> 
             <hr />
             <OptionsContainer>
-                <Option><b>00</b> HOME</Option>
-                <Option><b>01</b> DESTINATION</Option>
-                <Option><b>02</b> CREW</Option>
-                <Option><b>03</b> TECHNOLOGY</Option>
+                <CustomLink route="/"><b>00</b> HOME</CustomLink>
+                <CustomLink route="/destination"><b>01</b> DESTINATION</CustomLink>
+                <CustomLink route="/crew"><b>02</b> CREW</CustomLink>
+                <CustomLink route="/technology"><b>03</b> TECHNOLOGY</CustomLink>
             </OptionsContainer>
         </HeaderContainer>
     );
