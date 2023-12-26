@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import css from "styled-jsx/css";
+
+const activeStyles = css`
+    background: white;
+    border-radius: 50%;
+    color: #0B0D17;
+`;
 
 export const TechnologyViewContainer = styled.div`
     background-image: url('/technology-bg.jpg');
@@ -13,11 +20,21 @@ export const TechnologyContentContainer = styled.div`
     padding: 35px 170px;
     padding-right: 0px;
 
+    .technology-image {
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        } 
+    }
+
     @media screen and (max-width: 1000px) {
         flex-direction: column-reverse;
         padding: 25px;
         text-align: center;
-     }
+    }
+    
+    @media screen and (max-width: 600px) {
+        padding: 25px 0;
+    }
 `;
 
 export const NavigationContainer = styled.div`
@@ -50,10 +67,10 @@ export const OptionContainer = styled.div`
     color: white;
 
     &:hover {
-        background: white;
-        border-radius: 50%;
-        color: #0B0D17;
+        ${activeStyles};
     }
+
+    ${(props) => props.active ? activeStyles : ''};
 `;
 
 export const ColumnContainer = styled.div`
@@ -64,6 +81,10 @@ export const ColumnContainer = styled.div`
     h1, h3, p { 
         margin: 0;
     }
+
+    @media screen and (max-width: 600px) {
+       width: 100%;
+    } 
 `;
 
 export const FirstLine = styled.h3`
@@ -74,6 +95,14 @@ export const FirstLine = styled.h3`
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.7px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.362px;
+    } 
 `;
 
 export const MainLine = styled.h1`
@@ -83,6 +112,17 @@ export const MainLine = styled.h1`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media screen and (max-width: 600px) {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    } 
 `;
 
 export const Description = styled.p`
@@ -92,4 +132,16 @@ export const Description = styled.p`
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+
+    @media screen and (max-width: 600px) {
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        width: 80%;
+        margin: 5px 10%!important;
+    } 
 `;

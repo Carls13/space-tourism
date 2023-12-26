@@ -30,7 +30,7 @@ export const DestinationView = () => {
       <Header />
       <ViewTitle><OpacityNumber>01</OpacityNumber> Pick your destination</ViewTitle>
       <PlanetsContainer>
-        <Image src={planetImage} width={445} height={445} alt="Planet" />
+        <img className="planet-image" src={planetImage} alt="Planet" />
         <PlanetInfoContainer>
           <PlanetSelector>
             <PlanetOption active={destination === "MOON"} onClick={() => setDestination("MOON")}>MOON</PlanetOption>

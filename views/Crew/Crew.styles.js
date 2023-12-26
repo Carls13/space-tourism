@@ -17,7 +17,13 @@ export const CrewInfoContainer = styled.div`
         flex-direction: column;
         padding: 25px;
         text-align: center;
-     }
+    }
+
+     .crew-image {
+        @media screen and (max-width: 600px) {
+           width: 90%;
+        } 
+    }
 `;
 
 export const Role = styled.h3`

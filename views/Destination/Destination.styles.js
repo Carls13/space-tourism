@@ -4,7 +4,6 @@ export const DestinationViewContainer = styled.div`
     background-image: url('/destination-bg.jpg');
     height: auto;
     min-height: 100vh;
-    background-repeat: round;
 `;
 
 export const ViewTitle = styled.h3`
@@ -18,6 +17,10 @@ export const ViewTitle = styled.h3`
     text-transform: uppercase;
     margin-top: 50px;
     margin-left: 170px;
+
+    @media screen and (max-width: 1000px) {
+        margin-left: 20px;
+    }
 `;
 
 export const PlanetsContainer = styled.div`
@@ -30,7 +33,13 @@ export const PlanetsContainer = styled.div`
         flex-direction: column;
         padding: 25px;
         text-align: center;
-     }
+    }
+
+    .planet-image {
+        @media screen and (max-width: 600px) {
+           width: 80%;
+        } 
+    }
 `;
 
 export const OpacityNumber = styled.span`

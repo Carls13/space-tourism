@@ -32,16 +32,16 @@ export const TechnologyView = () => {
       </ViewTitle>
       <TechnologyContentContainer>
         <NavigationContainer>
-          <OptionContainer onClick={() => setTechnology("LAUNCH VEHICLE")}>1</OptionContainer>
-          <OptionContainer onClick={() => setTechnology("SPACEPORT")}>2</OptionContainer>
-          <OptionContainer onClick={() => setTechnology("SPACE CAPSULE")}>3</OptionContainer>
+          <OptionContainer active={technology === "LAUNCH VEHICLE"} onClick={() => setTechnology("LAUNCH VEHICLE")}>1</OptionContainer>
+          <OptionContainer active={technology === "SPACEPORT"} onClick={() => setTechnology("SPACEPORT")}>2</OptionContainer>
+          <OptionContainer active={technology === "SPACE CAPSULE"} onClick={() => setTechnology("SPACE CAPSULE")}>3</OptionContainer>
         </NavigationContainer>
         <ColumnContainer>
           <FirstLine>THE TERMINOLOGY…</FirstLine>
           <MainLine>{technologyTitle}</MainLine>
           <Description>{technologyDescription}</Description>
         </ColumnContainer>
-        <Image width={600} height={527} alt="Image" src={technologyImage} />
+        <Image className="technology-image" width={600} height={527} alt="Image" src={technologyImage} />
       </TechnologyContentContainer>
     </TechnologyViewContainer>
   );

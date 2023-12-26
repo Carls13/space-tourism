@@ -43,7 +43,7 @@ export const OptionsContainer = styled.div`
     align-items: center;
 
     @media screen and (max-width: 600px) {
-        ${(props) => props.isOpen ? css`display: none;` : ''};
+        ${(props) => !props.isOpen ? css`display: none;` : ''};
         flex-direction: column;
         align-items: flex-start;
         position: absolute;

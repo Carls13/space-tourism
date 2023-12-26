@@ -39,7 +39,7 @@ export const CrewView = () => {
             <Dot active={crewIndex === 3} onClick={() => setCrewIndex(3)} />
           </DotsContainer>
         </CrewDetailsColumn>
-        <img src={memberImage} width={568} alt="Planet" />
+        <img className="crew-image" src={memberImage} width={568} alt="Planet" />
       </CrewInfoContainer>
     </CrewViewContainer>
   );

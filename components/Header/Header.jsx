@@ -6,13 +6,16 @@ import {
 } from './Header.styles';
 import { CustomLink } from "../CustomLink/CustomLink";
 import { useState } from "react";
+import Link from "next/link";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <HeaderContainer>
-            <Image src="/logo.png" width={48} height={48} alt="Logo" /> 
+            <Link href={"/"}>
+                <Image src="/logo.png" width={48} height={48} alt="Logo" /> 
+            </Link>
             <hr />
             <OptionsContainer isOpen={isOpen}>
                 <CustomLink route="/"><b>00</b> HOME</CustomLink>
@@ -20,7 +23,7 @@ export const Header = () => {
                 <CustomLink route="/crew"><b>02</b> CREW</CustomLink>
                 <CustomLink route="/technology"><b>03</b> TECHNOLOGY</CustomLink>
             </OptionsContainer>
-            <Image src={!isOpen ? "/close.svg" : "/burger.svg"} onClick={() => setIsOpen(!isOpen)} width={48} height={48} alt="Logo" className="toggle-menu-icon" /> 
+            <Image src={isOpen ? "/close.svg" : "/burger.svg"} onClick={() => setIsOpen(!isOpen)} width={48} height={48} alt="Logo" className="toggle-menu-icon" /> 
         </HeaderContainer>
     );
 };

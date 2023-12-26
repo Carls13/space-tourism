@@ -52,6 +52,15 @@ export const MainLine = styled.h1`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media screen and (max-width: 1000px) {
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100px; 
+    }
 `;
 
 export const Description = styled.p`
