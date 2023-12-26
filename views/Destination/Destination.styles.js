@@ -4,6 +4,7 @@ export const DestinationViewContainer = styled.div`
     background-image: url('/destination-bg.jpg');
     height: auto;
     min-height: 100vh;
+    background-repeat: round;
 `;
 
 export const ViewTitle = styled.h3`
@@ -24,6 +25,12 @@ export const PlanetsContainer = styled.div`
     align-items: center;
     gap: 150px;
     padding: 35px 170px;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+     }
 `;
 
 export const OpacityNumber = styled.span`
@@ -43,12 +50,26 @@ export const PlanetInfoContainer = styled.div`
         margin-top: 50px;
         margin-bottom: 10px;
     }
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
 `;
 
 export const PlanetSelector = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
 `;
 
 export const PlanetOption = styled.span`

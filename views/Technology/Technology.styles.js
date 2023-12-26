@@ -12,12 +12,22 @@ export const TechnologyContentContainer = styled.div`
     gap: 80px;
     padding: 35px 170px;
     padding-right: 0px;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column-reverse;
+        padding: 25px;
+        text-align: center;
+     }
 `;
 
 export const NavigationContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: row;
+    }
 `;
 
 export const OptionContainer = styled.div`

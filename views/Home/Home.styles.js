@@ -4,6 +4,7 @@ export const HomeViewContainer = styled.div`
     background-image: url('/home-bg.jpg');
     height: auto;
     min-height: 100vh;
+    background-repeat: round;
 
     h1, h3, p { 
         margin: 0;
@@ -13,15 +14,25 @@ export const HomeViewContainer = styled.div`
 export const ContentContainer = styled.div`
     display: flex;
     align-items: center;
-    width: 50%;
     gap: 200px;
     padding: 85px;
     padding-left: 170px;
+
+    @media screen and (max-width: 1000px) {
+       flex-direction: column;
+       padding: 25px;
+       text-align: center;
+    }
 `;
 
 export const ColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
+    width: 50%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+     }
 `;
 
 export const FirstLine = styled.h3`
@@ -57,6 +68,10 @@ export const ButtonContainer = styled.div`
     flex-direction: column;
     gap: 10px;
     width: 40%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+     }
 `;
 
 export const Button = styled.button`
@@ -75,4 +90,9 @@ export const Button = styled.button`
     letter-spacing: 2px;
     text-align: center;
     cursor: pointer;
+
+    @media screen and (max-width: 1000px) {
+        display: block;
+        margin: auto;
+     }
 `;

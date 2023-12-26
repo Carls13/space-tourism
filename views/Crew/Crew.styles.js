@@ -4,7 +4,6 @@ export const CrewViewContainer = styled.div`
     background-image: url('/crew-bg.jpg');
     height: auto;
     min-height: 100vh;
-    background-repeat: round;
 `;
 
 export const CrewInfoContainer = styled.div`
@@ -13,6 +12,12 @@ export const CrewInfoContainer = styled.div`
     gap: 50px;
     padding: 35px 85px;
     padding-left: 170px;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+     }
 `;
 
 export const Role = styled.h3`
@@ -52,6 +57,10 @@ export const CrewDetailsColumn = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
 `;
 
 export const DotsContainer = styled.div`
@@ -62,6 +71,11 @@ export const DotsContainer = styled.div`
     div {
         margin: 0 5px;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        justify-content: center;
     }
 `;
 
