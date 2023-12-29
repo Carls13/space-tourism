@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
   HomeViewContainer,
   ContentContainer,
@@ -11,6 +12,8 @@ import {
 import { Header } from "@/components/Header/Header";
 
 export const HomeView = () => {
+  const router = useRouter();
+
   return (
     <HomeViewContainer>
       <Header />
@@ -26,7 +29,7 @@ export const HomeView = () => {
           </Description>
         </ColumnContainer>
         <ButtonContainer>
-          <Button>EXPLORE</Button>
+          <Button onClick={() => router.push('/destination')}>EXPLORE</Button>
         </ButtonContainer>
       </ContentContainer>
     </HomeViewContainer>
